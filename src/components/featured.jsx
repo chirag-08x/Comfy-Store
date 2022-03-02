@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useGlobalContext } from "../context";
 import DisplayProducts from "./displayProducts";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Featured = () => {
   const { items, loading } = useGlobalContext();
@@ -25,7 +26,14 @@ const Featured = () => {
           {loading ? (
             <h1 className="loading">Loading...</h1>
           ) : (
-            <DisplayProducts data={data} />
+            <>
+              <article className="product-list">
+                <DisplayProducts data={data} />
+              </article>
+              <Link to={"/products"} className="btn-container">
+                <button className="btn featured-btn">all products</button>
+              </Link>
+            </>
           )}
         </article>
       </section>

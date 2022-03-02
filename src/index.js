@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import { AppProvider } from "./context";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Router>
         <Navbar />
         <AppRoutes />
+        <Footer />
       </Router>
     </AppProvider>
   );

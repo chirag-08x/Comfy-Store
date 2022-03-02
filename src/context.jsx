@@ -9,6 +9,7 @@ const AppProvider = ({ children }) => {
   const refContainer = useRef(null);
   const [totalItems, setTotalItems] = useState(0);
   const { items, loading } = useFetch(URL);
+  const [value, setValue] = useState("");
 
   const openSidebar = () => {
     setSidebarOpen(true);
@@ -18,6 +19,10 @@ const AppProvider = ({ children }) => {
   const closeSidebar = () => {
     setSidebarOpen(false);
     refContainer.current.classList.remove("show-sidebar");
+  };
+
+  const handleSubmit = () => {
+    setValue("");
   };
 
   return (
@@ -30,6 +35,9 @@ const AppProvider = ({ children }) => {
         totalItems,
         items,
         loading,
+        setValue,
+        value,
+        handleSubmit,
       }}
     >
       {children}

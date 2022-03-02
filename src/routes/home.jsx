@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import heroImage from "../assets/hero-bcg.jpeg";
 import heroImageSmall from "../assets/hero-bcg-2.jpeg";
 import Featured from "../components/featured";
+import InfoTiles from "../components/infotiles";
+import Subscribe from "../components/subscribe";
+// import Footer from "../components/footer";
 
 const Home = () => {
   return (
@@ -28,6 +31,9 @@ const Home = () => {
         </section>
       </section>
       <Featured />
+      <InfoTiles />
+      <Subscribe />
+      {/* <Footer /> */}
     </>
   );
 };
