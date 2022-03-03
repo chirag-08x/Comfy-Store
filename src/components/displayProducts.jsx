@@ -2,7 +2,6 @@ import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const DisplayProducts = ({ data }) => {
-  console.log("data", data);
   return (
     <>
       {data.map((item) => {

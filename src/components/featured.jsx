@@ -45,7 +45,6 @@ export default Featured;
 const getThreeRandomProducts = (items) => {
   const randomProducts = new Set();
   while (randomProducts.size != 3) {
-    console.log("Nello");
     const randomNum = Math.floor(Math.random() * (items.length - 1 - 0) + 0);
     randomProducts.add(randomNum);
   }

@@ -21,7 +21,7 @@ const useFetch = (url) => {
     fetchItems(url);
   }, [url]);
 
-  return { items, loading };
+  return { items, loading, setItems };
 };
 
 export default useFetch;

@@ -1,5 +1,4 @@
 import { tiles } from "../data.js";
-console.log(tiles);
 
 const InfoTiles = () => {
   return (
