@@ -2,11 +2,12 @@ import styled from "styled-components";
 import bigBcg from "../assets/hero-bcg.jpeg";
 import smallBcg from "../assets/hero-bcg-2.jpeg";
 import { Link } from "react-router-dom";
+import Tiles from "../components/tiles";
 
 const Home = () => {
   return (
     <HomeWrapper>
-      <section className="section-center page-100">
+      <section className="section-center home-center">
         <article className="home-text">
           <h1 className="title">design your comfort zone</h1>
           <p className="subtitle">
@@ -25,6 +26,7 @@ const Home = () => {
           <img src={smallBcg} className="small-img" alt="" />
         </article>
       </section>
+      <Tiles />
     </HomeWrapper>
   );
 };
@@ -33,24 +35,35 @@ const HomeWrapper = styled.section`
   .img-container {
     display: none;
   }
-  .title {
-    width: 25rem;
-    /* background-color: red; */
-  }
-  .subtitle {
-    font-size: 1rem;
-    line-height: 2;
-    margin-bottom: 2rem;
-    max-width: 45rem;
+
+  .home-text {
+    .title {
+      width: 25rem;
+    }
+    .subtitle {
+      font-size: 1rem;
+      line-height: 2;
+      margin-bottom: 2rem;
+      max-width: 45rem;
+    }
   }
 
   @media (min-width: 992px) {
     .img-container {
       display: block;
       position: relative;
-      width: 30rem;
+      width: 28rem;
       height: 34rem;
       border-radius: 0.3rem;
+    }
+
+    .title {
+      font-size: 3rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      max-width: 35rem;
     }
 
     .img-container::before {
@@ -66,9 +79,9 @@ const HomeWrapper = styled.section`
       z-index: -1;
     }
 
-    .section-center {
+    .home-center {
       display: flex;
-      gap: 0 3rem;
+      gap: 0 5rem;
       justify-content: space-between;
       align-items: center;
     }
@@ -85,6 +98,10 @@ const HomeWrapper = styled.section`
       left: 0;
       transform: translateX(-50%);
       border-radius: 0.3rem;
+    }
+
+    .btn {
+      padding: 0.875rem 1.5rem;
     }
   }
 `;
