@@ -1,21 +1,13 @@
-// import App from "./components/app.jsx";
-import AppRoutes from "./route";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import App from "./app";
 import "./index.css";
-import { AppProvider } from "./context";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+import { ProductsProvider } from "./context/products_context";
 
 const Index = () => {
   return (
-    <AppProvider>
-      <Router>
-        <Navbar />
-        <AppRoutes />
-        <Footer />
-      </Router>
-    </AppProvider>
+    <ProductsProvider>
+      <App />
+    </ProductsProvider>
   );
 };
 
