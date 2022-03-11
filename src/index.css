@@ -164,3 +164,22 @@ button {
   color: var(--clr-black);
   transition: var(--transition);
 }
+
+.loading {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  border: 5px solid var(--clr-grey-6);
+  border-top: 5px solid var(--clr-primary-2);
+  animation: loader 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

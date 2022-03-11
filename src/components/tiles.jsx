@@ -104,6 +104,8 @@ const TilesWrapper = styled.section`
   }
 
   @media (min-width: 1220px) {
+    height: 29rem;
+
     .tiles {
       grid-template-columns: repeat(3, 1fr);
     }

@@ -3,6 +3,8 @@ import bigBcg from "../assets/hero-bcg.jpeg";
 import smallBcg from "../assets/hero-bcg-2.jpeg";
 import { Link } from "react-router-dom";
 import Tiles from "../components/tiles";
+import Subscribe from "../components/subsribe";
+import FeaturedProducts from "../components/featuredProducts";
 
 const Home = () => {
   return (
@@ -26,7 +28,9 @@ const Home = () => {
           <img src={smallBcg} className="small-img" alt="" />
         </article>
       </section>
+      <FeaturedProducts />
       <Tiles />
+      <Subscribe />
     </HomeWrapper>
   );
 };
