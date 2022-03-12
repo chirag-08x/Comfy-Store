@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const NavigateBar = ({ title }) => {
+const NavigateBar = ({ title, product }) => {
   return (
     <Wrapper>
       <section className="navigate-center">
         <h3>
-          <Link to={"/"}>home</Link> <span>/ {title} </span>
+          <Link to={"/"}>home</Link>
+          {product && <Link to={"/products"}> / Product</Link>}
+          <span> / {title} </span>
         </h3>
       </section>
     </Wrapper>
