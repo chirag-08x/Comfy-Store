@@ -61,13 +61,15 @@ const HomeWrapper = styled.section`
       border-radius: 0.3rem;
     }
 
-    .title {
-      font-size: 3rem;
-    }
+    .home-text {
+      .title {
+        font-size: 3rem;
+      }
 
-    .subtitle {
-      font-size: 1.25rem;
-      max-width: 35rem;
+      .subtitle {
+        font-size: 1.25rem;
+        max-width: 35rem;
+      }
     }
 
     .img-container::before {
