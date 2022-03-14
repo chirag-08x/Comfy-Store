@@ -105,7 +105,7 @@ const SingleProduct = () => {
               {company}
             </p>
             <hr />
-            {stock > 0 ? <AddToCart /> : <Notify />}
+            {stock > 0 ? <AddToCart product={product} /> : <Notify />}
           </section>
         </article>
       </section>
@@ -163,6 +163,12 @@ const Wrapper = styled.section`
       margin-top: 0;
       .price {
         font-size: 1.25rem;
+      }
+
+      .info {
+        * {
+          font-size: 1rem;
+        }
       }
     }
     .product-center {
