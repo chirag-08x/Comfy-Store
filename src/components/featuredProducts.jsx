@@ -1,7 +1,7 @@
 import Loading from "./loading";
 import { useProductsContext } from "../context/products_context";
 import styled from "styled-components";
-import Products from "./products";
+import Product from "./product";
 import { Link } from "react-router-dom";
 import Error from "./error";
 
@@ -30,7 +30,7 @@ const FeaturedProducts = () => {
         ) : (
           <article className="products">
             {featured.slice(0, 3).map((item) => {
-              return <Products key={item.id} {...item} />;
+              return <Product key={item.id} {...item} />;
             })}
           </article>
         )}

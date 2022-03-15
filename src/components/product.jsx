@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { formatPrice } from "../utils/helper";
 
-const Products = ({ image, name, price, id }) => {
+const Product = ({ image, name, price, id }) => {
   return (
     <Wrapper>
       <div className="container">
@@ -73,4 +73,4 @@ const Wrapper = styled.article`
   }
 `;
 
-export default Products;
+export default Product;

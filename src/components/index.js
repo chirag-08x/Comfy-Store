@@ -7,6 +7,9 @@ import ProductImages from "./productImages";
 import Stars from "./stars";
 import AddToCart from "./addtocart";
 import Notify from "./notifyme";
+import Filters from "./filter";
+import Sort from "./sort";
+import ProductList from "./product_list";
 
 export {
   Navbar,
@@ -18,4 +21,7 @@ export {
   Stars,
   AddToCart,
   Notify,
+  Filters,
+  Sort,
+  ProductList,
 };
