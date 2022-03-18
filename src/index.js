@@ -3,12 +3,15 @@ import App from "./app";
 import "./index.css";
 import { ProductsProvider } from "./context/products_context";
 import { FilterProvider } from "./context/filter_context";
+import { CartProvider } from "./context/cart_context";
 
 const Index = () => {
   return (
     <ProductsProvider>
       <FilterProvider>
-        <App />
+        <CartProvider>
+          <App />
+        </CartProvider>
       </FilterProvider>
     </ProductsProvider>
   );
