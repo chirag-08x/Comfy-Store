@@ -25,6 +25,7 @@ const Wrapper = styled.section`
     .product-center {
       display: grid;
       grid-template-columns: 200px 1fr;
+      gap: 0 1rem;
     }
   }
 `;
