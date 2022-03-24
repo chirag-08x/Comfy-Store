@@ -1,11 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { formatPrice } from "../utils/helper";
-import { useState } from "react";
 
 const Listview = ({ products }) => {
-  const [readMore, setReadMore] = useState(false);
-
   return (
     <ListWrapper>
       {products.map((product) => {
@@ -17,14 +14,7 @@ const Listview = ({ products }) => {
             <div>
               <h4>{name}</h4>
               <h5>{formatPrice(price)}</h5>
-              <p>
-                {readMore
-                  ? `${description}. `
-                  : `${description.substring(0, 200)}...`}
-                <button onClick={() => setReadMore(!readMore)}>
-                  {readMore ? "read less" : "read more"}
-                </button>
-              </p>
+              <p>{description.substring(0, 150)}....</p>
               <Link to={`/product/${id}`}>
                 <button className="btn btn-small">details</button>
               </Link>
@@ -62,14 +52,14 @@ const ListWrapper = styled.section`
   p {
     font-size: 0.875rem;
     margin-bottom: 1rem;
-
+    /* 
     button {
       border: none;
       background: transparent;
       text-transform: capitalize;
       font-size: 0.9rem;
       color: blue;
-    }
+    } */
   }
 
   .btn-small {

@@ -68,7 +68,7 @@ const HomeWrapper = styled.section`
 
       .subtitle {
         font-size: 1.25rem;
-        max-width: 35rem;
+        max-width: 31rem;
       }
     }
 

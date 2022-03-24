@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import NavigateBar from "../components/navigatebar";
 import { Filters, Sort, ProductList } from "../components";
+import { useState } from "react";
 
 const Products = () => {
+
   return (
     <Wrapper className="page-100">
       <NavigateBar title="products" />
@@ -13,7 +15,7 @@ const Products = () => {
 
         <div className="sort-products">
           <Sort />
-          <ProductList />
+          <ProductList/>
         </div>
       </section>
     </Wrapper>

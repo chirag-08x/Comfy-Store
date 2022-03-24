@@ -10,6 +10,8 @@ import Notify from "./notifyme";
 import Filters from "./filter";
 import Sort from "./sort";
 import ProductList from "./product_list";
+import CartContent from "./cartContent";
+import NavigateBar from "./navigatebar";
 
 export {
   Navbar,
@@ -24,4 +26,6 @@ export {
   Filters,
   Sort,
   ProductList,
+  CartContent,
+  NavigateBar,
 };
