@@ -6,7 +6,6 @@ import { CartContent, NavigateBar } from "../components";
 const Cart = () => {
   const { state } = useCartContext();
   const { cart } = state;
-  console.log(cart);
 
   if (cart.length < 1) {
     return (
