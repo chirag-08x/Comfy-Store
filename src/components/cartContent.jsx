@@ -13,7 +13,6 @@ const CartContent = () => {
   return (
     <Wrapper className="page section-center">
       <CartColumns />
-      <hr />
       {cart.map((item) => {
         return <CartItem key={item.id} {...item} />;
       })}
@@ -34,6 +33,26 @@ const CartContent = () => {
   );
 };
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  hr {
+    margin-top: 3rem;
+  }
+  .link-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn {
+      font-size: 0.9rem;
+      color: white;
+      text-transform: capitalize;
+    }
+
+    .clear-btn {
+      background-color: black;
+    }
+  }
+`;
 
 export default CartContent;

@@ -10,7 +10,7 @@ const Cart = () => {
   if (cart.length < 1) {
     return (
       <Wrapper className="page-100">
-        <div>
+        <div className="empty">
           <h2>Your cart is empty</h2>
           <Link to={"/products"}>
             <button className="btn">fill it</button>
@@ -32,7 +32,7 @@ const Cart = () => {
 
 const Wrapper = styled.section`
   text-align: center;
-  div {
+  .empty {
     text-align: center;
     padding: 5rem 0;
     h2 {

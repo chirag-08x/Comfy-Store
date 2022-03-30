@@ -38,12 +38,19 @@ const SingleProduct = () => {
   }, [error]);
 
   if (loading) {
-    return <Loading />;
+    return (
+      <section
+        className="page-100"
+        style={{ display: "grid", placeItems: "center" }}
+      >
+        <Loading />
+      </section>
+    );
   }
 
   if (error) {
     return (
-      <>
+      <section>
         <Error />
         <p
           style={{
@@ -56,7 +63,7 @@ const SingleProduct = () => {
         >
           redirecting back to home page.....
         </p>
-      </>
+      </section>
     );
   }
 
