@@ -3,12 +3,12 @@ import { FaPlus, FaMinus } from "react-icons/fa";
 
 const AmountButtons = ({ increase, decrease, amount }) => {
   return (
-    <Wrapper>
-      <button onClick={decrease}>
+    <Wrapper className="amount-btns">
+      <button className="amt-btn" onClick={decrease}>
         <FaMinus />
       </button>
       <h2>{amount}</h2>
-      <button onClick={increase}>
+      <button className="amt-btn" onClick={increase}>
         <FaPlus />
       </button>
     </Wrapper>
@@ -20,10 +20,9 @@ const Wrapper = styled.section`
   place-items: center;
   width: 125px;
   grid-template-columns: repeat(3, 1fr);
-  /* gap: 0 1.5rem; */
   margin-bottom: 1rem;
 
-  h1 {
+  h2 {
     margin-bottom: 0;
   }
 

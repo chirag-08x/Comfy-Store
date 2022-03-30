@@ -11,7 +11,7 @@ const CartItem = ({ id, amount, color, image, max, name, price }) => {
   const { removeItem } = useCartContext();
 
   return (
-    <Wrapper className="content">
+    <Wrapper className="cart-content">
       <div className="title">
         <img src={image} alt={name} />
         <div>
@@ -48,6 +48,18 @@ const Wrapper = styled.div`
   .price,
   .subtotal {
     display: none;
+  }
+
+  .amount-btns {
+    justify-self: center;
+    width: 75px;
+    margin-bottom: 0;
+    h2 {
+      font-size: 1.15rem;
+    }
+    .amt-btn {
+      font-size: 0.875rem;
+    }
   }
 
   .title {
@@ -90,6 +102,65 @@ const Wrapper = styled.div`
       width: 5rem;
       height: 5rem;
       border-radius: 0.3rem;
+    }
+  }
+
+  .remove-btn {
+    justify-self: center;
+    display: grid;
+    place-items: center;
+    background: transparent;
+    border: none;
+    background-color: var(--clr-red-dark);
+    color: white;
+    font-size: 0.875rem;
+    border-radius: 0.3rem;
+    padding: 0.35rem;
+  }
+
+  @media (min-width: 776px) {
+    grid-template-columns: 316px 1fr 1fr 1fr auto;
+
+    .amount-btns {
+      width: 100px;
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .price,
+    .subtotal {
+      display: initial;
+      letter-spacing: 1px;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+
+    .price {
+      color: var(--clr-primary-2);
+    }
+
+    .subtotal {
+      color: var(--clr-grey-4);
+    }
+
+    .title {
+      img {
+        width: 8rem;
+      }
+      div {
+        .price-small {
+          display: none;
+        }
+
+        .color {
+          span {
+            width: 0.875rem;
+            height: 0.875rem;
+            border-radius: 0.3rem;
+          }
+        }
+      }
     }
   }
 `;

@@ -10,6 +10,7 @@ const CartContent = () => {
     state: { cart },
     clearCart,
   } = useCartContext();
+
   return (
     <Wrapper className="page section-center">
       <CartColumns />

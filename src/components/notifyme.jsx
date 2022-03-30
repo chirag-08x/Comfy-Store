@@ -1,5 +1,5 @@
 const Notify = () => {
-  return <button>notify me</button>;
+  return <button className="btn">notify me</button>;
 };
 
 export default Notify;
