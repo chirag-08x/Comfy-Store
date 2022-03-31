@@ -163,6 +163,8 @@ const Filters = () => {
 };
 
 const Wrapper = styled.section`
+  position: sticky;
+  top: 1rem;
   .form-control {
     margin-bottom: 1.25rem;
 

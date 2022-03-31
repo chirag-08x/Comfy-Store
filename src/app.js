@@ -7,6 +7,7 @@ import {
   Products,
   SingleProduct,
   CheckOut,
+  PrivateRoute,
 } from "./pages";
 import { Navbar, Sidebar, Footer } from "./components";
 
@@ -21,7 +22,14 @@ const App = () => {
         <Route path="/products" element={<Products />} />
         <Route path="/product/:id" element={<SingleProduct />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<CheckOut />} />
+        <Route
+          path="/checkout"
+          element={
+            <PrivateRoute>
+              <CheckOut />
+            </PrivateRoute>
+          }
+        />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

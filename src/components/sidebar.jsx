@@ -5,10 +5,12 @@ import logo from "../assets/logo.svg";
 import { links } from "../utils/utils";
 import CartButtons from "./cartButton";
 import { useProductsContext } from "../context/products_context";
+import { useUserContext } from "../context/user_context";
 
 const Sidebar = () => {
   const { state, closeSidebar } = useProductsContext();
   const { isSidebarOpen } = state;
+  const { myUser } = useUserContext();
 
   return (
     <SidebarContainer>
@@ -29,9 +31,11 @@ const Sidebar = () => {
               </li>
             );
           })}
-          <li>
-            <Link to={"/checkout"}>checkout</Link>
-          </li>
+          {myUser && (
+            <li>
+              <Link to={"/checkout"}>checkout</Link>
+            </li>
+          )}
         </ul>
 
         <CartButtons />
