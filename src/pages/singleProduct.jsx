@@ -27,6 +27,7 @@ const SingleProduct = () => {
 
   useEffect(() => {
     fetchSingleProduct(`${single_products_url}${id}`);
+    // eslint-disable-next-line
   }, [id]);
 
   useEffect(() => {
@@ -35,6 +36,7 @@ const SingleProduct = () => {
         navigate("/");
       }, 3000);
     }
+    // eslint-disable-next-line
   }, [error]);
 
   if (loading) {
@@ -71,8 +73,6 @@ const SingleProduct = () => {
 
   const {
     id: productID,
-    category,
-    colors,
     company,
     description,
     images,

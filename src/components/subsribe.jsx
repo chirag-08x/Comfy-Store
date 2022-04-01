@@ -1,10 +1,6 @@
 import styled from "styled-components";
-import { useForm } from "@formspree/react";
-import { useEffect, useRef, useState } from "react";
 
 const Subscribe = () => {
-  const [state, handleSubmit] = useForm("xgedygle");
-
   return (
     <SubscribeWrapper>
       <section className="section-center">
@@ -17,19 +13,14 @@ const Subscribe = () => {
           </p>
         </article>
 
-        <form
-          action="https://formspree.io/f/xgedygle"
-          method="POST"
-          className="form"
-          //   onSubmit={handleSubmit}
-        >
+        <form className="form">
           <input
             id="email"
             type="email"
             name="email"
             placeholder="Enter Email"
           />
-          <button type="submit" className="btn" disabled={state.submitting}>
+          <button type="submit" className="btn">
             subscribe
           </button>
         </form>

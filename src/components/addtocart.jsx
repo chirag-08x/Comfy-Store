@@ -13,14 +13,14 @@ const AddToCart = ({ product }) => {
   const [amount, setAmount] = useState(1);
 
   const increaseAmount = () => {
-    if (amount == stock) {
+    if (amount === stock) {
       return;
     }
     setAmount((prevAmt) => prevAmt + 1);
   };
 
   const decreaseAmount = () => {
-    if (amount == 1) {
+    if (amount === 1) {
       return;
     }
     setAmount((prevAmt) => prevAmt - 1);

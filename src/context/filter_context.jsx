@@ -1,10 +1,4 @@
-import {
-  useState,
-  useEffect,
-  useContext,
-  createContext,
-  useReducer,
-} from "react";
+import { useEffect, useContext, createContext, useReducer } from "react";
 import filter_reducer from "../reducer/filter_reducer";
 import {
   SET_GRIDVIEW,
