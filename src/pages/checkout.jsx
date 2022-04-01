@@ -1,15 +1,38 @@
-import NavigateBar from "../components/navigatebar";
 import styled from "styled-components";
+import { StripeCheckout, NavigateBar } from "../components";
+
+import { useCartContext } from "../context/cart_context";
+import { Link } from "react-router-dom";
 
 const CheckOut = () => {
+  const {
+    state: { cart },
+  } = useCartContext();
   return (
-    <CheckoutWrapper>
+    <main>
       <NavigateBar title="checkout" />
-      <section className="section-center page"></section>
-    </CheckoutWrapper>
+      <Wrapper className="section-center page">
+        {cart.length < 1 ? (
+          <div className="empty">
+            <h2>your cart is empty</h2>
+            <Link to={"/products"}>
+              <button className="btn">fill it</button>
+            </Link>
+          </div>
+        ) : (
+          <StripeCheckout />
+        )}
+      </Wrapper>
+    </main>
   );
 };
 
-const CheckoutWrapper = styled.section``;
+const Wrapper = styled.section`
+  display: grid;
+  place-items: center;
+  .empty {
+    text-align: center;
+  }
+`;
 
 export default CheckOut;

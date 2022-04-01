@@ -10,8 +10,8 @@ import { UserProvider } from "./context/user_context";
 const Index = () => {
   return (
     <Auth0Provider
-      domain="dev-vvy2866e.us.auth0.com"
-      clientId="6uwDHKSS1RlZSF8kEAGZ0kkM3tVE5P6D"
+      domain={process.env.REACT_APP_DOMAIN}
+      clientId={process.env.REACT_APP_CLIENT_ID}
       redirectUri={window.location.origin}
       cacheLocation="localstorage"
     >

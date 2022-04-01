@@ -12,6 +12,7 @@ import Sort from "./sort";
 import ProductList from "./product_list";
 import CartContent from "./cartContent";
 import NavigateBar from "./navigatebar";
+import StripeCheckout from "./stripeCheckout";
 
 export {
   Navbar,
@@ -28,4 +29,5 @@ export {
   ProductList,
   CartContent,
   NavigateBar,
+  StripeCheckout,
 };
