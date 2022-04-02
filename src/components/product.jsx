@@ -28,13 +28,19 @@ const Wrapper = styled.article`
     position: relative;
     border-radius: 0.3rem;
     margin-bottom: 1rem;
+    background-color: black;
 
     &:hover button {
       display: grid;
     }
 
+    &:hover img {
+      opacity: 0.5;
+      transition: var(--transition);
+    }
+
     img {
-      height: 14rem;
+      height: 12rem;
       border-radius: 0.3rem;
     }
 

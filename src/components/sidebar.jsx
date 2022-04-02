@@ -57,6 +57,7 @@ const SidebarContainer = styled.div`
     background-color: var(--clr-white);
     transform: translateX(-100%);
     transition: var(--transition);
+    z-index: 5;
   }
 
   .show-sidebar {
