@@ -1,3 +1,3 @@
 # Comfy Store
 
-> A simple App where you can choose from varierty of furniture items and can buy them with seamless and variety of payments options. This app is built using React.
+> Welcome to Comfy Store, an online e-commerce where you can choose from variety of products and buy what's best suited for your house.
