@@ -16,16 +16,12 @@ const Tiles = () => {
 
         <div className="tiles">
           {tiles.map((tile) => {
-            const { id, icon, text } = tile;
+            const { id, icon, text, desc } = tile;
             return (
               <div key={id} className="tile">
                 <div className="icon">{icon}</div>
                 <h3>{text}</h3>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum
-                  velit autem unde numquam nisi
-                </p>
+                <p>{desc}</p>
               </div>
             );
           })}

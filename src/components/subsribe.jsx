@@ -7,9 +7,8 @@ const Subscribe = () => {
         <article className="hero-text">
           <h3>Join our newsletter and get 20% off</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            sint unde quaerat ratione soluta veniam provident adipisci cumque
-            eveniet tempore?
+            To get exciting offers and deals, do sign up for our newsletter, and
+            get all the exciting offers on you mail.
           </p>
         </article>
 

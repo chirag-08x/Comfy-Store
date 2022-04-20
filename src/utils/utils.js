@@ -23,15 +23,18 @@ export const tiles = [
     id: 4,
     icon: <GiCompass />,
     text: "mission",
+    desc: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi`,
   },
   {
     id: 5,
     icon: <GiDiamondHard />,
     text: "vision",
+    desc: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi`,
   },
   {
     id: 6,
     icon: <GiPapers />,
     text: "history",
+    desc: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi`,
   },
 ];
