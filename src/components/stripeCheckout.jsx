@@ -38,7 +38,7 @@ const CheckoutForm = () => {
       );
       setClientSecret(data.clientSecret);
     } catch (error) {
-      // console.log(error.response)
+      console.log(error.response);
     }
   };
   useEffect(() => {
@@ -72,15 +72,36 @@ const CheckoutForm = () => {
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     setProcessing(true);
-    const payload = await stripe.confirmCardPayment(clientSecret, {
-      payment_method: {
-        card: elements.getElement(CardElement),
+
+    const paymentMethodData = {
+      type: "card",
+      card: elements.getElement(CardElement),
+      billing_details: {
+        name: "Random name", // Customer's name
+        address: {
+          line1: "123 street, NY, USA", // Customer's address line 1
+          // Add other address fields as needed
+        },
       },
-    });
-    if (payload.error) {
-      setError(`Payment failed ${payload.error.message}`);
+    };
+
+    const { paymentIntent, error } = await stripe.confirmCardPayment(
+      clientSecret,
+      {
+        payment_method: paymentMethodData,
+      }
+    );
+
+    // const payload = await stripe.confirmCardPayment(clientSecret, {
+    //   payment_method: {
+    //     card: elements.getElement(CardElement),
+    //   },
+    // });
+
+    if (error) {
+      setError(`Payment failed: ${error.message}`);
       setProcessing(false);
-    } else {
+    } else if (paymentIntent.status === "succeeded") {
       setError(null);
       setProcessing(false);
       setSucceeded(true);
